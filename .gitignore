@@ -7,6 +7,3 @@
 node_modules/
 dist/
 *.zip
-*.png
-*.jpeg
-*.mp4
