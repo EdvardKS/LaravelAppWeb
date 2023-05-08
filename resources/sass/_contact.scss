@@ -1,0 +1,14 @@
+
+
+.contact-blade{
+        .unstyle-contact{
+                list-style: none !important;
+                border: none;
+                text-decoration: none;
+        }
+        .unstyle-contact:hover{
+                color: var(--color-1) !important;
+                transition-duration: 300ms;
+        }
+    
+}

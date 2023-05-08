@@ -1,0 +1,48 @@
+.quienes-somos {
+    .bg-light2 {
+        background-color: var(--color-gris);
+    }
+    .esto {
+        /* From https://css.glass */
+        background: rgba(195, 194, 194, 0.65);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(6.8px);
+        -webkit-backdrop-filter: blur(6.8px);
+    }
+    .margenLG1{
+        margin-left:-200px
+    }
+    .margenLG2{
+        margin:0 -200px 0 200px; 
+    }
+
+    ._otro {
+        background-image: url(/public/img/corporativa/sliders/chiken-live.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    @media (max-width: 576px) {
+        .margenLG1{
+            margin: 0;
+        }
+        .margenLG2{
+            margin:0; 
+        }
+        .imagenLG{
+            display: none;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+        .margenLG1{
+            margin: 0;
+        }
+        .margenLG2{
+            margin:0; 
+        }
+      }
+}

@@ -1,0 +1,49 @@
+//////////////////// MIGRACIONES
+
+
+// Para crear una migración -- tablas -- debemos ejecutar el siguiente comando:
+
+                            php artisan make:migration create_flights_table
+
+// Tendra una función up, donde se creará el schema de nuestra tabla. Y una función down, para eliminarla por si hacemos un --freesh
+
+
+
+// Para revertir las ultimas migraciones por si ha habido algún error ejecuta el sigueinte comando
+
+                            php artisan migrate:rollback
+
+
+// Para ejecutar las migraciones, machacando las que ya hay y ejecutar los seeders, comando:
+
+                            php artisan migrate:fresh
+ 
+                            php artisan migrate:fresh --seed
+
+
+///// -> Para editar, eliminar o más acciones con tablas o columnas visita -> https://laravel.com/docs/10.x/migrations
+
+
+----------------------------     Dominio	Descripción     ----------------------------     
+
+$table->primary('id');	                            ://-> Agrega una clave principal.
+$table->primary(['id', 'parent_id']);	            ://-> Añade claves compuestas.
+$table->unique('email');	                        ://-> Agrega un índice único.
+$table->index('state');	                            ://-> Agrega un índice.
+$table->fullText('body');	                        ://-> Agrega un índice de texto completo (MySQL/PostgreSQL).
+$table->fullText('body')->language('english');	    ://-> Agrega un índice de texto completo del idioma especificado (PostgreSQL).
+$table->spatialIndex('location');	                ://-> Agrega un índice espacial (excepto SQLite).
+
+Ejemplo de apliación: ->            $table->string('email')->unique();
+                                    $table->timestamp('email_verified_at')->nullable();
+                                                o
+                                    $table->unique('email');
+                                    $table->index(['account_id', 'created_at']);
+
+
+
+
+
+///////////////////// SEEDERS
+
+// Para crear un seeders 

@@ -1,0 +1,29 @@
+User-agent: *
+Disallow: /panel/
+Disallow: /panel/products/
+Disallow: /panel/products/*/restore
+Disallow: /panel/products/borrado
+Disallow: /panel/categories/
+Disallow: /panel/categories/*/restore
+Disallow: /panel/categories/*/borrado
+Disallow: /panel/home-settings
+Disallow: /panel/encargos/
+Disallow: /encargos/refresh
+Disallow: /panel/encargos/*/entregado
+Disallow: /panel/holidays/
+Disallow: /panel/holidays/list
+Disallow: /panel/holidays/*/destroy
+Disallow: /panel/opening_hours/
+Disallow: /panel/opening_hours/*/update
+Disallow: /politicas-privacidad
+Disallow: /aviso-legal
+Disallow: /politicas-cookies
+Disallow: /unsubscribe
+Disallow: /newsletter
+Disallow: /sitemap.xml
+
+User-agent: Mediapartners-Google
+Allow: /
+
+Sitemap: https://asadorlamorenica.com/sitemap.xml
+

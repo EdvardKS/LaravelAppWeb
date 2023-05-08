@@ -1,0 +1,28 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+// Additional
+@import 'custom';
+
+// Home
+@import 'home';
+
+// Contacto 
+@import 'contact';
+
+// whoweare 
+@import 'whoweare';
+
+// panel 
+@import 'panel';
+
+// makeOrder 
+@import 'makeOrder';

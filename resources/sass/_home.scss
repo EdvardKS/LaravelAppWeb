@@ -1,0 +1,86 @@
+.home-blade {
+    .bg-nosotros_slider {
+        max-width: 100%;
+        width: 100%;
+        height: 700px;
+        background-image: url(../../public/img/corporativa/maxtor/nosotros/la_fachada.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: brightness(30%);
+    }
+
+    .nosotros-relative {
+        position: relative;
+        color: var(--color-blanco);
+    }
+
+    .nosotros-absolut {
+        position: absolute;
+        top: 20%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        color: var(--color-blanco);
+    }
+
+    .nosotros-btn-absolut {
+        position: absolute;
+        width: auto;
+        width: 10rem;
+        left: 0;
+        right: 0;
+        margin: auto;
+        color: var(--color-blanco);
+    }
+
+    .nosotros-btn-absolut:hover {
+        color: var(--color-negro) !important;
+        transition-duration: 300ms;
+    }
+
+    @media (max-width:500px) {
+        .bg-nosotros_slider {
+            height: 1080px !important;
+
+            animation: slideBg 60s infinite;
+        }
+
+        .nosotros-absolut {
+            top: 3%;
+        }
+
+    }
+
+    @media (max-width:900px) {
+        .bg-nosotros_slider {
+
+            animation: slideBg 60s infinite;
+        }
+
+        .nosotros-absolut {
+            top: 2%;
+        }
+
+
+    }
+
+    .card-img-top {
+        height: 18rem;
+        object-fit: cover;
+    }
+
+    @keyframes slideBg {
+        0% {
+            background-position: 40% 0%;
+        }
+
+        50% {
+            background-position: 100% 0%;
+        }
+
+        100% {
+            background-position: 40% 0%;
+        }
+    }
+
+}

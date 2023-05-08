@@ -1,0 +1,90 @@
+
+
+Comentarios:
+Los comentarios en Blade se definen como {{--comentario--}}.
+
+Variables:
+Para imprimir una variable en una plantilla Blade, utilice las llaves dobles {{ $variable }}.
+
+Estructuras de control:
+Para estructuras de control como 'if', 'else' y 'foreach', Blade utiliza la sintaxis familiar de PHP, 
+pero con algunas diferencias en la sintaxis para hacerlo más legible. 
+
+Por ejemplo, la estructura 'if' se define como 
+'@if (condición)' ... '@endif', 
+
+mientras que foreach se define como 
+'@foreach($array as $element) ... @endforeach.'
+
+Inclusión de archivos:
+Para incluir archivos en una plantilla Blade, use la directiva '@include('ruta.archivo')'.
+
+Extensión de plantillas:
+Para extender una plantilla base en Blade, use la directiva '@extends('ruta.archivo')' y 
+luego incluya secciones en la plantilla extendida utilizando la directiva 
+'@section('nombre_seccion') ... @endsection.'
+
+--- --- ---
+
+Directiva @yield:
+La directiva @yield se utiliza para definir secciones en la plantilla que pueden ser sobrescritas 
+en la plantilla que se extiende. 
+
+Por ejemplo, puede definir una sección llamada "contenido" en una plantilla base y 
+luego sobrescribirla en una plantilla que extiende esa plantilla base.
+
+---
+
+Directiva @section:
+La directiva @section se utiliza para definir una sección en la plantilla que puede ser sobrescrita en una plantilla que extiende la plantilla actual. Puedes usarlo junto con @yield para definir secciones que se pueden sobrescribir en diferentes plantillas.
+
+Directiva @parent:
+La directiva @parent se utiliza dentro de una sección que ha sido sobrescrita en una plantilla que extiende la plantilla actual. Esto permite que la sección sobrescrita incluya el contenido de la sección original. Por ejemplo, si tiene una sección llamada "contenido" en una plantilla base y luego sobrescribe esa sección en una plantilla que extiende esa plantilla base, puedes usar @parent para incluir el contenido original de la sección "contenido" en la plantilla que sobrescribe esa sección.
+
+Directiva @include:
+La directiva @include se utiliza para incluir una plantilla en otra. Puedes usarlo para incluir fragmentos de plantilla en diferentes partes de una plantilla.
+
+Directiva @isset:
+La directiva @isset se utiliza para verificar si una variable está definida antes de imprimir su valor. Si la variable está definida, la directiva @isset imprimirá su valor; de lo contrario, no se imprimirá nada.
+
+Directiva @empty:
+La directiva @empty se utiliza para verificar si una variable está vacía antes de imprimir su valor. Si la variable está vacía, la directiva @empty imprimirá su valor; de lo contrario, no se imprimirá nada.
+
+
+
+///// Docker
+
+Necesito apuntar archivos de configuracion antes del sigueitne paso
+
+1- composer require laravel/sail --dev
+2- php artisan sail:install
+3- ./vendor/bin/sail up --> Esto aranca las maquinas
+4- alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail' --> Configuramos la maquina para no tener que poner el anterior paso cada vez
+    4.1 -> accede a 'nano ~/.bashrc' o 'nano ~/.zshrc' y pega el alias de antes y luegoejecuta exec ~SHELL en el terminal 
+    
+Para aprender más consultar -> https://laravel.com/docs/10.x/sail#main-content
+
+sail up -d -> Este comando ejecuta los contenedores de Docker -d para no ensuciar termianl
+
+sail stop -> parar contenedores
+
+sail npm run dev -> ejecuta el programa (Como liveserver) Con Vite 
+
+sail artisan migrate:fresh --seed -> Este comando migra nuestros schemes a la base de datos eliminando las que hay y ejecutando las seed
+
+///  lo de antes no funcionará si no instalamos node npm --> node -v <--> npm -v
+
+./vendor/bin/sail node -v
+./vendor/bin/sail npm -v
+
+///  para instalarlos en nuestra app
+
+npm install
+
+///  ahora busca vite.config.js en ella indicamos las carpetas dodne están los recursos
+
+/// Si quieres aprender más sobre vite visita --> https://laravel.com/docs/10.x/vite#installing-node
+// Cargar scripts y estilos con @vite(['resources/scss/app.scss','resources/js/app.js'])
+
+Ejecutar programa con VITE --> npm run dev
+Hacer que el proyecto exista siempre sin que arranque el vite --> npm run build
